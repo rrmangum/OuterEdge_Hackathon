@@ -90,8 +90,8 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/" className="text-white footer-links">
-                    Chat
+                  <Link to="/twitch" className="text-white footer-links">
+                    Twitch Streamers
                   </Link>
                 </li>
                 <li className="mt-1">
