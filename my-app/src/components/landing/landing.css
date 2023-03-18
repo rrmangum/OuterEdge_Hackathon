@@ -1,3 +1,7 @@
+  .landing-title {
+    font-size: 5rem
+  }
+
   .landing-background-image {
       background-image: url("");
       background-size: cover;
@@ -80,4 +84,8 @@
   .section-text {
       position: relative;
       top: 20%;
+  }
+
+  .message-card {
+    background-color: #111111;
   }
