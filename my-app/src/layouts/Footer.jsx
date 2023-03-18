@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Logo from "../assets/images/logos/blockchain-icon.jpg";
+import { CompanyName, CompanySlogan } from "../assets/content/content";
 import "./layouts.css";
 
 export default function Footer() {
@@ -56,7 +57,7 @@ export default function Footer() {
               </ul> */}
             </Col>
             <Col lg={2} className="mt-3 mt-lg-0">
-              <h5 className="text-white">BoostChain</h5>
+              <h5 className="text-white">{CompanyName}</h5>
               <ul className="list-unstyled ps-0 mb-0 mt-1">
                 <li className="mt-1">
                   <Link to="/" className="text-white footer-links">
@@ -125,7 +126,7 @@ export default function Footer() {
             <Col>
               <div className="mt-1">
                 <p className="text-light mt-4 text-center mb-0">
-                  © 2023 BoostChain. Accelerating content creators..
+                  © 2023 {CompanyName}. {CompanySlogan}.
                 </p>
               </div>
             </Col>
