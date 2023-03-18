@@ -1,80 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Container, Row, Col, Card } from "react-bootstrap";
-import Daycare from "../../assets/images/landing/templanding-daycare.jpg";
-import Neighborhood from "../../assets/images/landing/templanding-neighborhood.jpg";
-import Community from "../../assets/images/landing/templanding-community.jpg";
-import { CompanyName, CompanySlogan } from "../../assets/content/content";
+import { Container, Row } from "react-bootstrap";
+import FindInfluencers from "./FindInfluencers";
 import "./landing.css";
 
-export default function TempLanding() {
+export default function Landing() {
   return (
     <>
-      <div className="landing-background-image">
-        <div className="landing-banner-text">
-          <p className="landing-p mt-3">{CompanyName}&trade;</p>
-          <p className="landing-bottom-p">{CompanySlogan}.</p>
-          <Link className="btn-primary btn mb-5 landing-button" to="/">
-            Find a Home
-          </Link>
-        </div>
-      </div>
-      <Container className="mt-5">
-        <h1 className="text-center text-primary display-5">
-          Why {CompanyName}
-        </h1>
-        <p className="text-center lead">
-          {CompanyName} makes creating smart contracts easy.
-        </p>
+      <br />
+      <Container className="landing-bg-dark">
         <Row>
-          <Col>
-            <Card className="card-landing">
-              <Card.Img
-                className="card-landing-img"
-                variant="top"
-                src={Daycare}
-              />
-              <Card.Body>
-                <Card.Title className="text-primary">Daycare</Card.Title>
-                <Card.Text>
-                  Find the best daycare providers in your local area to protect
-                  your kids.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="card-landing">
-              <Card.Img
-                className="card-landing-img"
-                variant="top"
-                src={Neighborhood}
-              />
-              <Card.Body>
-                <Card.Title className="text-primary">Neighborhoods</Card.Title>
-                <Card.Text>
-                  See community statistics to make sure you move into a safe
-                  neighborhood.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card className="card-landing">
-              <Card.Img
-                className="card-landing-img"
-                variant="top"
-                src={Community}
-              />
-              <Card.Body>
-                <Card.Title className="text-primary">Community</Card.Title>
-                <Card.Text>
-                  See what activities are in your local community to connect
-                  with other military families.
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <FindInfluencers />
         </Row>
       </Container>
     </>

@@ -1,5 +1,5 @@
   .landing-background-image {
-      background-image: url("../../assets/images/landing/blockchain.jpg");
+      background-image: url("");
       background-size: cover;
       display: flex;
       flex-direction: row-reverse;
@@ -68,4 +68,15 @@
 
   .card-landing:hover {
       transform: scale(1.01);
+  }
+
+  .section-img {
+      height: 400px;
+      width: 400px;
+      object-fit: cover;
+  }
+
+  .section-text {
+      position: relative;
+      top: 20%;
   }
