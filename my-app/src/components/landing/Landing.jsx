@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import Footer from "../../layouts/Footer";
 import Daycare from "../../assets/images/landing/templanding-daycare.jpg";
 import Neighborhood from "../../assets/images/landing/templanding-neighborhood.jpg";
 import Community from "../../assets/images/landing/templanding-community.jpg";
@@ -78,7 +77,6 @@ export default function TempLanding() {
           </Col>
         </Row>
       </Container>
-      <Footer />
     </>
   );
 }
