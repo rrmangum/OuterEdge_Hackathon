@@ -22,10 +22,10 @@ export default function TempLanding() {
       </div>
       <Container className="mt-5">
         <h1 className="text-center text-primary display-5">
-          WHY {CompanyName}
+          Why {CompanyName}
         </h1>
         <p className="text-center lead">
-          Hasty makes finding the perfect home easy.
+          {CompanyName} makes creating smart contracts easy.
         </p>
         <Row>
           <Col>

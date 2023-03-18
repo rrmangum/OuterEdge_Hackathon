@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Logo from "../assets/images/logos/blockchain-icon.jpg";
-import { CompanyName } from "../assets/content/content";
+import { CompanyName, CompanySlogan } from "../assets/content/content";
 import "./layouts.css";
 
 export default function Footer() {
@@ -126,7 +126,7 @@ export default function Footer() {
             <Col>
               <div className="mt-1">
                 <p className="text-light mt-4 text-center mb-0">
-                  © 2023 {CompanyName}. Accelerating content creators..
+                  © 2023 {CompanyName}. {CompanySlogan}.
                 </p>
               </div>
             </Col>
