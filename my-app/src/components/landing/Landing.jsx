@@ -5,6 +5,7 @@ import Footer from "../../layouts/Footer";
 import Daycare from "../../assets/images/landing/templanding-daycare.jpg";
 import Neighborhood from "../../assets/images/landing/templanding-neighborhood.jpg";
 import Community from "../../assets/images/landing/templanding-community.jpg";
+import { CompanyName, CompanySlogan } from "../../assets/content/content";
 import "./landing.css";
 
 export default function TempLanding() {
@@ -12,15 +13,17 @@ export default function TempLanding() {
     <>
       <div className="landing-background-image">
         <div className="landing-banner-text">
-          <p className="landing-p mt-3">{`BoostChain`}&trade;</p>
-          <p className="landing-bottom-p">Accelerating content creators.</p>
+          <p className="landing-p mt-3">{CompanyName}&trade;</p>
+          <p className="landing-bottom-p">{CompanySlogan}.</p>
           <Link className="btn-primary btn mb-5 landing-button" to="/">
             Find a Home
           </Link>
         </div>
       </div>
       <Container className="mt-5">
-        <h1 className="text-center text-primary display-5">WHY HASTY</h1>
+        <h1 className="text-center text-primary display-5">
+          WHY {CompanyName}
+        </h1>
         <p className="text-center lead">
           Hasty makes finding the perfect home easy.
         </p>
