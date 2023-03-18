@@ -1,5 +1,7 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
+import { format } from "date-fns";
+import { CompanyName } from "../assets/content/content";
 import "./layouts.css";
 
 export default function Footer() {
@@ -7,11 +9,15 @@ export default function Footer() {
     <>
       <br />
       <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Container>
         <Row>
-          <Col>
-            <h1 className="text-white">Footer</h1>
-          </Col>
+          <p className="text-white text-center">
+            © {format(new Date(), "yyyy")} {CompanyName}&trade;
+          </p>
         </Row>
       </Container>
     </>
