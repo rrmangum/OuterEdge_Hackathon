@@ -1,0 +1,71 @@
+.twitch-background-image {
+    /* background-image: url("../../assets/images/landing/blockchain.jpg"); */
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: top;
+    width: 100%;
+}
+
+.twitch-banner-text {
+    font-weight: 900;
+    max-width: 50%;
+    max-height: 60%;
+    text-align: center;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    padding: 30px;
+    margin: 50px 150px;
+}
+
+.twitch-p {
+    font-size: 1.9rem;
+    font-family: arial;
+    margin: 0;
+    color: white;
+}
+
+.twitch-bottom-p {
+    font-family: arial;
+    padding: 0 8%;
+    color: white;
+    font-weight: 900;
+    font-weight: bolder;
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+.twitch-banner img {
+    width: 100%;
+    height: 650px;
+}
+
+.flex-row-twitch {
+    display: flex;
+    float: left;
+    margin-bottom: 40px;
+    margin: 12px;
+    position: relative;
+}
+
+.card-top-twitch img {
+    width: 100%;
+}
+
+.card-twitch {
+    background: white;
+    height: 350px;
+    border-radius: 5px;
+    border: 0rem;
+    box-shadow: 0px 1px 3px rgb(3 0 71 / 9%);
+}
+
+.card-twitch-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-twitch:hover {
+    transform: scale(1.01);
+}
