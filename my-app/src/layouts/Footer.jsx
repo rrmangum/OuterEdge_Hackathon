@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import Logo from "../assets/images/logos/blockchain-icon.jpg";
 import "./layouts.css";
-const Footer = () => {
+
+export default function Footer() {
   return (
     <>
       <br />
@@ -12,13 +13,13 @@ const Footer = () => {
         <Container>
           <Row>
             <Col lg={6}>
-              <img
+              {/* <img
                 src={Logo}
                 alt=""
-                className="logo-dark hasty-logo-alt"
+                className="logo-dark footer-logo-alt"
                 height="70"
-              />
-              <p className="text-white mt-1"></p>
+              /> */}
+              {/* <p className="text-white mt-1"></p>
               <ul className="social-list list-inline mt-1">
                 <li className="list-inline-item text-center">
                   <Link
@@ -52,24 +53,24 @@ const Footer = () => {
                     <i className="mdi mdi-instagram"></i>
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
             </Col>
             <Col lg={2} className="mt-3 mt-lg-0">
-              <h5 className="text-white">Hasty</h5>
+              <h5 className="text-white">BoostChain</h5>
               <ul className="list-unstyled ps-0 mb-0 mt-1">
                 <li className="mt-1">
-                  <Link to="/aboutus" className="text-white">
+                  <Link to="/" className="text-white">
                     About Us
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/listings" className="text-white">
-                    Listings
+                  <Link to="/" className="text-white">
+                    Smart Contracts
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/pricing" className="text-white">
-                    Plans
+                  <Link to="/" className="text-white">
+                    Subscriptions
                   </Link>
                 </li>
               </ul>
@@ -83,17 +84,17 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/podcast" className="text-white">
+                  <Link to="/" className="text-white">
                     Podcasts
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/apps/chat" className="text-white">
+                  <Link to="/" className="text-white">
                     Chat
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/apps/videochat" className="text-white">
+                  <Link to="/" className="text-white">
                     Video Chat
                   </Link>
                 </li>
@@ -108,12 +109,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/faq" className="text-white">
+                  <Link to="/" className="text-white">
                     FAQ
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/privacy" className="text-white">
+                  <Link to="/" className="text-white">
                     Privacy
                   </Link>
                 </li>
@@ -133,6 +134,4 @@ const Footer = () => {
       </footer>
     </>
   );
-};
-
-export default Footer;
+}

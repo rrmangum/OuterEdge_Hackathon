@@ -1,34 +1,15 @@
-.hasty-logo {
-    padding-right: 1rem;
-}
-
 .social-list {
     padding-left: 4rem;
+}
+
+.footer-links {
+    text-decoration: none;
 }
 
 .footer-bkg {
     background-color: black;
 }
 
-.hasty-quote {
-    color: white;
-}
-
-.footer-links {
-    padding: 5px;
-    text-align: right;
-    margin-left: 1.5rem;
-    transition: all .4s;
-    text-decoration: none;
-}
-
-.links-foot {
-    padding: 5px;
-    color: #ffffff;
-    align-content: center;
-    text-decoration: none;
-}
-
-.hasty-logo-alt {
+.footer-logo-alt {
     padding-left: 6rem;
 }
