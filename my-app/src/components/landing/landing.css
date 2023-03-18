@@ -71,9 +71,10 @@
   }
 
   .section-img {
-      height: 400px;
-      width: 400px;
-      object-fit: cover;
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
   }
 
   .section-text {
