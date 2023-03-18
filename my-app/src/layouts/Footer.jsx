@@ -59,17 +59,17 @@ export default function Footer() {
               <h5 className="text-white">BoostChain</h5>
               <ul className="list-unstyled ps-0 mb-0 mt-1">
                 <li className="mt-1">
-                  <Link to="/" className="text-white">
+                  <Link to="/" className="text-white footer-links">
                     About Us
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/" className="text-white">
+                  <Link to="/" className="text-white footer-links">
                     Smart Contracts
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/" className="text-white">
+                  <Link to="/" className="text-white footer-links">
                     Subscriptions
                   </Link>
                 </li>
@@ -79,22 +79,22 @@ export default function Footer() {
               <h5 className="text-white">Discover</h5>
               <ul className="list-unstyled ps-0 mb-0 mt-1">
                 <li className="mt-1">
-                  <Link to="/blogs" className="text-white">
+                  <Link to="/blogs" className="text-white footer-links">
                     Blogs
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/" className="text-white">
+                  <Link to="/" className="text-white footer-links">
                     Podcasts
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/" className="text-white">
+                  <Link to="/" className="text-white footer-links">
                     Chat
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/" className="text-white">
+                  <Link to="/" className="text-white footer-links">
                     Video Chat
                   </Link>
                 </li>
@@ -104,17 +104,17 @@ export default function Footer() {
               <h5 className="text-white">Support</h5>
               <ul className="list-unstyled ps-0 mb-0 mt-1">
                 <li className="mt-1">
-                  <Link to="/contactus" className="text-white">
+                  <Link to="/contactus" className="text-white footer-links">
                     Contact Us
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/" className="text-white">
+                  <Link to="/" className="text-white footer-links">
                     FAQ
                   </Link>
                 </li>
                 <li className="mt-1">
-                  <Link to="/" className="text-white">
+                  <Link to="/" className="text-white footer-links">
                     Privacy
                   </Link>
                 </li>
@@ -124,7 +124,7 @@ export default function Footer() {
           <Row>
             <Col>
               <div className="mt-1">
-                <p className="text-light mt-3 text-center mb-0">
+                <p className="text-light mt-4 text-center mb-0">
                   © 2023 BoostChain. Accelerating content creators..
                 </p>
               </div>
