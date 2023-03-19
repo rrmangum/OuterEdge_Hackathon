@@ -9,7 +9,7 @@ export default function Title() {
       <Container>
         <Row>
           <Col className="px-0 mx-0">
-            <div className="landing-title-text display-5">
+            <div className="landing-title-text display-2 mt-5 fw-bold">
               {CompanyName}&trade;
             </div>
           </Col>
