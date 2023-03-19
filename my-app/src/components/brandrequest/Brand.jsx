@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import { Container, Row, Col } from "react-bootstrap";
 import { Formik, Form, Field } from "formik";
+import { format } from "date-fns";
 
 const defaultFormData = {
   influencer: "",
   brand: "The Brand Company",
-  date: "",
+  date: format(new Date(), "yyyy-MM-dd"),
   request: "",
 };
 
