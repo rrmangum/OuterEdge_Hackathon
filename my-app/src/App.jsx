@@ -32,7 +32,7 @@ function App() {
               <Route
                 key={route.key}
                 path={route.props.path}
-                element={<route.props.element />}
+                element={<route.props.element currentWallet={"wallet data"} />}
               />
             );
           })}
