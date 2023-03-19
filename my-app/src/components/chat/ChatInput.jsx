@@ -8,8 +8,8 @@ import "./messages.css";
 const defaultMsg = {
   messageText: "",
   subject: "chathub",
-  recipientId: 2,
-  senderId: 1,
+  recipient: "",
+  sender: "",
 };
 
 export default function ChatInput(props) {
@@ -22,9 +22,8 @@ export default function ChatInput(props) {
     const isSubjectIdProvided =
       chatMessage.subject && chatMessage.subject !== "";
     const isRecipientIdProvided =
-      chatMessage.recipientId && chatMessage.recipientId !== "";
-    const isSenderIdProvided =
-      chatMessage.senderId && chatMessage.senderId !== "";
+      chatMessage.recipient && chatMessage.recipient !== "";
+    const isSenderIdProvided = chatMessage.sender && chatMessage.sender !== "";
     if (
       isMessageProvided &&
       isSubjectIdProvided &&
@@ -47,8 +46,8 @@ export default function ChatInput(props) {
       const msg = { ...prevState };
       msg.messageText = e.target.value;
       msg.subject = "Chathub";
-      msg.recipientId = 2;
-      msg.senderId = 1;
+      msg.recipient = "recipient";
+      msg.sender = "sender";
       return msg;
     });
   };

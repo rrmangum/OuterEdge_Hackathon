@@ -1,4 +1,4 @@
-const CompanyName = "BoostBrands";
+const CompanyName = "OnlyBrands";
 const CompanySlogan = "Accelerating content creators";
 const LandingContent = [
   {
