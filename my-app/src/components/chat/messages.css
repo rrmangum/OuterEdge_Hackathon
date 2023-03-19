@@ -18,7 +18,7 @@
 }
 
 .message-list-card{
-    height: 40rem;
+    height: 50rem;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -39,7 +39,7 @@
 }
 
 .chat-window {
-    height: 40rem;
+    height: 50rem;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -113,7 +113,7 @@
 }
 
 .friend-info-card{
-    height: 40rem;
+    height: 50rem;
 }
 
 .wrapper-field {
