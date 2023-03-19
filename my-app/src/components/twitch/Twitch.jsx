@@ -8,7 +8,7 @@ export default function Twitch() {
     vidDefer.style.display = "none";
     setTimeout(() => {
       vidDefer.style.display = "block";
-    }, 1200); // delay in milliseconds
+    }, 1500); // delay in milliseconds
   }, []);
 
   return (
