@@ -136,3 +136,9 @@
     width: 50px;
     object-fit: cover;
 }
+
+.avatar-md {
+    height: 125px;
+    width: 125px;
+    object-fit: cover;
+}

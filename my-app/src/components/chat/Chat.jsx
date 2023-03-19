@@ -20,7 +20,8 @@ const defaultHandlers = { response: [], err: [] };
 export default function Chat(props) {
   const [connection, setConnection] = useState(null);
   const [chats, setChats] = useState(defaultChats);
-  const [wallet, setWallet] = useState("");
+  const [brandWallet, setBrandWallet] = useState("");
+  const [creatorWallet, setCreatorWallet] = useState("");
   const [handlers, setHandlers] = useState(defaultHandlers);
   const [show, setShow] = useState(false);
   const [creatorShow, setCreatorShow] = useState(false);
@@ -31,9 +32,7 @@ export default function Chat(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
   const handleCreatorClose = () => setCreatorShow(false);
-  const handleCreatorShow = () => setCreatorShow(true);
 
   useEffect(() => {
     const newConnection = new HubConnectionBuilder()
@@ -79,17 +78,28 @@ export default function Chat(props) {
   };
 
   const handleConnect = () => {
-    console.log("handleConnect");
     init().then(onInitSuccess);
   };
 
   const onInitSuccess = (response) => {
-    setWallet(response);
+    setBrandWallet(response);
   };
 
   useEffect(() => {
-    console.log("wallet useEffect", wallet);
-  }, [wallet]);
+    console.log(brandWallet);
+  }, [brandWallet]);
+
+  const handleCreatorConnect = () => {
+    init().then(onCreatorInitSuccess);
+  };
+
+  const onCreatorInitSuccess = (response) => {
+    setCreatorWallet(response);
+  };
+
+  useEffect(() => {
+    console.log(creatorWallet);
+  }, [creatorWallet]);
 
   const handleRequest = () => {
     handleShow();
@@ -146,7 +156,7 @@ export default function Chat(props) {
             variant="primary"
             onClick={handleConnect}
             className="me-5"
-            disabled={wallet && wallet !== "" ? true : false}
+            disabled={brandWallet && brandWallet !== "" ? true : false}
           >
             Connect Wallet
           </Button>
@@ -160,7 +170,7 @@ export default function Chat(props) {
             variant="success"
             type="submit"
             form="brandform"
-            disabled={wallet && wallet !== "" ? false : true}
+            disabled={brandWallet && brandWallet !== "" ? false : true}
           >
             Request
           </Button>
@@ -176,30 +186,14 @@ export default function Chat(props) {
           <Modal.Title>Issue Brand Approval</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <CreatorMint />
+          <CreatorMint
+            brandWallet={brandWallet}
+            setCreatorShow={setCreatorShow}
+          />
         </Modal.Body>
         <Modal.Footer>
-          <Button
-            variant="primary"
-            onClick={handleConnect}
-            className="me-5"
-            disabled={wallet && wallet !== "" ? true : false}
-          >
-            Connect Wallet
-          </Button>
-          <span className="me-5"></span>
-          <span className="me-5"></span>
-          <span className="me-1"></span>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleCreatorClose}>
             Close
-          </Button>
-          <Button
-            variant="success"
-            type="submit"
-            form="brandform"
-            disabled={wallet && wallet !== "" ? false : true}
-          >
-            Request
           </Button>
         </Modal.Footer>
       </Modal>
@@ -208,18 +202,16 @@ export default function Chat(props) {
           <Col className="col-3">
             <ChatLog />
           </Col>
-          <Col className="col-5">
+          <Col className="col-6">
             <ChatWindow
               chats={chats}
               sendMessage={sendMessage}
               handleRequest={handleRequest}
               handleAccept={handleAccept}
               handleDeny={handleDeny}
-              handleAccept={handleAccept}
-              handleDeny={handleDeny}
             />
           </Col>
-          <Col>
+          <Col className="col-3">
             <ContactCard />
           </Col>
         </Row>

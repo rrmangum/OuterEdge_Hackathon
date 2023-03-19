@@ -4,8 +4,8 @@ import { Formik, Form, Field } from "formik";
 import { format } from "date-fns";
 
 const defaultFormData = {
-  influencer: "",
-  brand: "The Brand Company",
+  influencer: "KINGSLEAGUE",
+  brand: "Gatorade",
   date: format(new Date(), "yyyy-MM-dd"),
   request: "",
   mediaUrl: "",

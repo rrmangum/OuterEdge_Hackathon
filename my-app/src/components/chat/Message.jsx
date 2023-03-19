@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import avatar from "../../assets/images/chat/avatar.png";
+import avatar from "../../assets/images/chat/ethereum.jpg";
 import "./messages.css";
 
 const defaultSender = {
