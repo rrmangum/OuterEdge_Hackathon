@@ -46,8 +46,8 @@ export default function Twitch() {
           <thead>
             <tr className="twitch-table-header">
               <th>RANK</th>
-              <th />
               <th>Streamer</th>
+              <th></th>
               <th />
               <th />
               <th>AVG VIEWERS</th>
