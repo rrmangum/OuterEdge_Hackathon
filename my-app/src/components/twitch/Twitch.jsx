@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Nav } from "react-bootstrap";
 import "./twitch.css";
 
 export default function Twitch() {
+  useEffect(() => {
+    const vidDefer = document.getElementsByTagName("iframe")[0];
+    vidDefer.style.display = "none";
+    setTimeout(() => {
+      vidDefer.style.display = "block";
+    }, 1200); // delay in milliseconds
+  }, []);
+
   return (
     <>
       <Row>
@@ -13,8 +21,8 @@ export default function Twitch() {
             src="https://www.youtube.com/embed/Efq0-521Des?controls=0&autoplay=1&mute=1&loop=1"
             title="YouTube video player"
             style={{
-              transform: "scale(4.7)",
-              paddingTop: "100px",
+              transform: "scale(3.5)",
+              paddingTop: "85px",
               overflow: "hidden",
             }}
           ></iframe>
