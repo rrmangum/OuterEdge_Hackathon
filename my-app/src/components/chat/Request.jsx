@@ -1,10 +1,17 @@
 import React from "react";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Image } from "react-bootstrap";
 import { format } from "date-fns";
 import "./messages.css";
 
 export default function Request(props) {
-  console.log(props, "request props");
+  const handleAccept = () => {
+    props.handleAccept(props.requestMessage);
+  };
+
+  const handleDeny = () => {
+    props.handleDeny(props.requestMessage);
+  };
+
   return (
     <>
       <Card className="chat-card m-2">
@@ -34,8 +41,15 @@ export default function Request(props) {
               ? props.requestMessage.messageText
               : "We would like for you to provide us an image of you using our brand name item. It is the best item."}
           </Card.Text>
-          <Button variant="danger">Deny</Button>
-          <Button variant="success" className="ms-2">
+          <Image
+            src={props.requestMessage.mediaUrl}
+            alt="request_media"
+            className="request-img mb-3"
+          />
+          <Button variant="danger" onClick={handleDeny}>
+            Deny
+          </Button>
+          <Button variant="success" onClick={handleAccept} className="ms-2">
             Accept
           </Button>
         </Card.Body>

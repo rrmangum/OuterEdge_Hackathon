@@ -3,7 +3,10 @@ import { HubConnectionBuilder } from "@microsoft/signalr";
 import { init } from "../../services/Web3Client";
 import { Modal, Container, Row, Col, Button } from "react-bootstrap";
 import ChatWindow from "./ChatWindow";
+import ChatLog from "./ChatLog";
+import ContactCard from "./ContactCard";
 import Brand from "../brandrequest/Brand";
+import CreatorMint from '../creator/Creator';
 
 const defaultChats = {
   currentChat: [],
@@ -20,6 +23,7 @@ export default function Chat(props) {
   const [wallet, setWallet] = useState("");
   const [handlers, setHandlers] = useState(defaultHandlers);
   const [show, setShow] = useState(false);
+  const [creatorShow, setCreatorShow] = useState(false);
 
   const latestChat = useRef(null);
 
@@ -27,6 +31,9 @@ export default function Chat(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleCreatorClose = () => setCreatorShow(false);
+  const handleCreatorShow = () => setCreatorShow(true);
 
   useEffect(() => {
     const newConnection = new HubConnectionBuilder()
@@ -95,10 +102,17 @@ export default function Chat(props) {
       recipient: values.brand,
       sender: values.influencer,
       date: values.date,
+      mediaUrl: values.mediaUrl,
     };
     sendMessage(requestMessage);
     handleClose();
   };
+
+  const handleAccept = (requestMessage) => {
+    setCreatorShow(true);
+  };
+
+  const handleDeny = (requestMessage) => {};
 
   const errHandler = (error) => {
     if (handlers.err.length > 5) {
@@ -123,7 +137,44 @@ export default function Chat(props) {
           <Modal.Title>Request Content From Influencer</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Brand sendRequest={sendRequest} />
+          <Brand sendRequest={sendRequest}/>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="primary"
+            onClick={handleConnect}
+            className="me-5"
+            disabled={wallet && wallet !== "" ? true : false}
+          >
+            Connect Wallet
+          </Button>
+          <span className="me-5"></span>
+          <span className="me-5"></span>
+          <span className="me-1"></span>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button
+            variant="success"
+            type="submit"
+            form="brandform"
+            disabled={wallet && wallet !== "" ? false : true}
+          >
+            Request
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Modal
+        show={creatorShow}
+        onHide={handleCreatorClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Issue Brand Approval</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <CreatorMint />
         </Modal.Body>
         <Modal.Footer>
           <Button
@@ -152,12 +203,20 @@ export default function Chat(props) {
       </Modal>
       <Container>
         <Row>
+          <Col>
+            <ChatLog />
+          </Col>
           <Col className="col-5">
             <ChatWindow
               chats={chats}
               sendMessage={sendMessage}
               handleRequest={handleRequest}
+              handleAccept={handleAccept}
+              handleDeny={handleDeny}
             />
+          </Col>
+          <Col>
+            <ContactCard />
           </Col>
         </Row>
       </Container>

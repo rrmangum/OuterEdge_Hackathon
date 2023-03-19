@@ -8,6 +8,7 @@ const defaultFormData = {
   brand: "The Brand Company",
   date: format(new Date(), "yyyy-MM-dd"),
   request: "",
+  mediaUrl: "",
 };
 
 export default function Brand(props) {
@@ -45,6 +46,12 @@ export default function Brand(props) {
                 name="request"
                 className="form-control mt-2"
                 placeholder="Enter request here"
+              />
+              <Field
+                type="text"
+                name="mediaUrl"
+                className="form-control mt-2"
+                placeholder="Enter media url here"
               />
             </Form>
           </Formik>

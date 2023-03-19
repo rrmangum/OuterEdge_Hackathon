@@ -18,6 +18,8 @@ export default function ChatWindow(props) {
           key={`messages_${i}`}
           currentContact={chats.currentContact}
           requestMessage={chatMessage}
+          handleAccept={props.handleAccept}
+          handleDeny={props.handleDeny}
         />
       );
     } else {
