@@ -29,11 +29,15 @@ export const init = async () => {
 };
 
 export const mintToken = async (address, url) => {
-  if(isInitialized) {
+  if (isInitialized) {
     await init();
   }
 
   return contract.methods
     .issueNFT(address, url)
     .send({ from: selectedAccount });
+};
+
+export const getWallet = () => {
+  return selectedAccount;
 };

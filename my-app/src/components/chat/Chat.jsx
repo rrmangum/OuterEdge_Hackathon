@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { HubConnectionBuilder } from "@microsoft/signalr";
+import { init } from "../../services/Web3Client";
 import { Modal, Container, Row, Col, Button } from "react-bootstrap";
 import ChatWindow from "./ChatWindow";
 import Brand from "../brandrequest/Brand";
@@ -16,6 +17,7 @@ const defaultHandlers = { response: [], err: [] };
 export default function Chat(props) {
   const [connection, setConnection] = useState(null);
   const [chats, setChats] = useState(defaultChats);
+  const [wallet] = useState("");
   const [handlers, setHandlers] = useState(defaultHandlers);
   const [show, setShow] = useState(false);
 
@@ -68,7 +70,10 @@ export default function Chat(props) {
     }
   };
 
-  const handleConnect = () => {};
+  const handleConnect = () => {
+    console.log("handleConnect");
+    console.log(init());
+  };
 
   const handleRequest = () => {
     handleShow();
