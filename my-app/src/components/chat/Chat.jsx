@@ -3,6 +3,8 @@ import { HubConnectionBuilder } from "@microsoft/signalr";
 import { init } from "../../services/Web3Client";
 import { Modal, Container, Row, Col, Button } from "react-bootstrap";
 import ChatWindow from "./ChatWindow";
+import ChatLog from "./ChatLog";
+import ContactCard from "./ContactCard";
 import Brand from "../brandrequest/Brand";
 
 const defaultChats = {
@@ -95,10 +97,15 @@ export default function Chat(props) {
       recipient: values.brand,
       sender: values.influencer,
       date: values.date,
+      mediaUrl: values.mediaUrl,
     };
     sendMessage(requestMessage);
     handleClose();
   };
+
+  const handleAccept = (requestMessage) => {};
+
+  const handleDeny = (requestMessage) => {};
 
   const errHandler = (error) => {
     if (handlers.err.length > 5) {
@@ -152,12 +159,18 @@ export default function Chat(props) {
       </Modal>
       <Container>
         <Row>
+          <Col>
+            <ChatLog />
+          </Col>
           <Col className="col-5">
             <ChatWindow
               chats={chats}
               sendMessage={sendMessage}
               handleRequest={handleRequest}
             />
+          </Col>
+          <Col>
+            <ContactCard />
           </Col>
         </Row>
       </Container>
