@@ -1,3 +1,9 @@
+.navbar-logo {
+    height: 30px;
+    width: auto;
+    object-fit: cover;
+}
+
 .social-list {
     padding-left: 4rem;
 }

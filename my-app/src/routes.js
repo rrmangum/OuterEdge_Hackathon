@@ -1,9 +1,25 @@
 import { lazy } from "react";
 
+const Brand = lazy(() => import("./components/brandrequest/Brand"));
+const Creator = lazy(() => import("./components/creatormint/Creator"));
 const Landing = lazy(() => import("./components/landing/Landing"));
-const Creator = lazy(() => import("./components/creator/Creator"))
+const Twitch = lazy(() => import("./components/twitch/Twitch"));
 
 const routes = [
+  {
+    path: "/brand",
+    name: "Brand",
+    exact: true,
+    element: Brand,
+    isAnonymous: true,
+  },
+  {
+    path: "/creator",
+    name: "Creator",
+    exact: true,
+    element: Creator,
+    isAnonymous: true,
+  },
   {
     path: "/",
     name: "Landing",
@@ -12,10 +28,10 @@ const routes = [
     isAnonymous: true,
   },
   {
-    path: "/creator",
-    name: "Creator",
+    path: "/twitch",
+    name: "Twitch",
     exact: true,
-    element: Creator,
+    element: Twitch,
     isAnonymous: true,
   },
 ];

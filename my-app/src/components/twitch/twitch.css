@@ -126,3 +126,8 @@ td {
 th {
     color: rgb(13, 110, 253);
 }
+
+.twitch-modal {
+    background-color: black;
+    opacity: 95%;
+}
