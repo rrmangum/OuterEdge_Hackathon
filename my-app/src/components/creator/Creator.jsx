@@ -5,7 +5,7 @@ import { useDropzone } from "react-dropzone";
 import { Container, Row, Col } from "react-bootstrap";
 import './creator.css';
 
-export default function Creator() {
+export default function Creator(props) {
   const [tokenData, setTokenData] = useState({
     name: "Test Approval",
     description: "Approval issued to Test Brand",

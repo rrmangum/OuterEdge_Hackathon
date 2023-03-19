@@ -4,6 +4,7 @@ import { init } from "../../services/Web3Client";
 import { Modal, Container, Row, Col, Button } from "react-bootstrap";
 import ChatWindow from "./ChatWindow";
 import Brand from "../brandrequest/Brand";
+import CreatorMint from '../creator/Creator';
 
 const defaultChats = {
   currentChat: [],
@@ -20,6 +21,7 @@ export default function Chat(props) {
   const [wallet, setWallet] = useState("");
   const [handlers, setHandlers] = useState(defaultHandlers);
   const [show, setShow] = useState(false);
+  const [creatorShow, setCreatorShow] = useState(false);
 
   const latestChat = useRef(null);
 
@@ -27,6 +29,9 @@ export default function Chat(props) {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleCreatorClose = () => setCreatorShow(false);
+  const handleCreatorShow = () => setCreatorShow(true);
 
   useEffect(() => {
     const newConnection = new HubConnectionBuilder()
@@ -108,6 +113,43 @@ export default function Chat(props) {
       >
         <Modal.Header closeButton>
           <Modal.Title>Request Content From Influencer</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <CreatorMint />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button
+            variant="primary"
+            onClick={handleConnect}
+            className="me-5"
+            disabled={wallet && wallet !== "" ? true : false}
+          >
+            Connect Wallet
+          </Button>
+          <span className="me-5"></span>
+          <span className="me-5"></span>
+          <span className="me-1"></span>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button
+            variant="success"
+            type="submit"
+            form="brandform"
+            disabled={wallet && wallet !== "" ? false : true}
+          >
+            Request
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Modal
+        show={handleCreatorShow}
+        onHide={handleCreatorClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Issue Brand Approval</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Brand />
