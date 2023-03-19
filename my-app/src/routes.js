@@ -3,7 +3,6 @@ import { lazy } from "react";
 const Brand = lazy(() => import("./components/brandrequest/Brand"));
 const Creator = lazy(() => import("./components/creatormint/Creator"));
 const Landing = lazy(() => import("./components/landing/Landing"));
-const Creator = lazy(() => import("./components/creator/Creator"));
 const Twitch = lazy(() => import("./components/twitch/Twitch"));
 
 const routes = [
@@ -26,13 +25,6 @@ const routes = [
     name: "Landing",
     exact: true,
     element: Landing,
-    isAnonymous: true,
-  },
-  {
-    path: "/creator",
-    name: "Creator",
-    exact: true,
-    element: Creator,
     isAnonymous: true,
   },
   {
