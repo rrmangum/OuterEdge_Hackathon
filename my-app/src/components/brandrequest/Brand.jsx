@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router";
 import { Container, Row, Col } from "react-bootstrap";
 import { Formik, Form, Field } from "formik";
 import { format } from "date-fns";
@@ -11,13 +10,11 @@ const defaultFormData = {
   request: "",
 };
 
-export default function Brand() {
-  const navigate = useNavigate();
+export default function Brand(props) {
   const [formData] = useState(defaultFormData);
 
   const handleSubmit = (values) => {
-    const stateForTransport = { type: "REQUEST_VIEW", payload: values };
-    navigate("/creator", { state: stateForTransport });
+    props.sendRequest(values);
   };
 
   return (

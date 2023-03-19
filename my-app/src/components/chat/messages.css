@@ -93,3 +93,11 @@
 .friend-info-card{
     height: 40rem;
 }
+
+.chat-card-bold{
+    font-weight: bold;
+}
+
+.chat-card{
+    width: 350px;
+}

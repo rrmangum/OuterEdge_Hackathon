@@ -61,6 +61,7 @@ export default function Chat(props) {
   const sendMessage = async (chatMessage) => {
     if (connection._connectionStarted) {
       try {
+        console.log("chatMessage right before being sent", chatMessage);
         await connection.send("SendMessage", chatMessage);
       } catch (error) {
         errHandler(error);
@@ -87,6 +88,18 @@ export default function Chat(props) {
     handleShow();
   };
 
+  const sendRequest = (values) => {
+    let requestMessage = {
+      messageText: values.request,
+      subject: "Request",
+      recipient: values.brand,
+      sender: values.influencer,
+      date: values.date,
+    };
+    sendMessage(requestMessage);
+    handleClose();
+  };
+
   const errHandler = (error) => {
     if (handlers.err.length > 5) {
       handlers.err.pop();
@@ -110,7 +123,7 @@ export default function Chat(props) {
           <Modal.Title>Request Content From Influencer</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Brand />
+          <Brand sendRequest={sendRequest} />
         </Modal.Body>
         <Modal.Footer>
           <Button
