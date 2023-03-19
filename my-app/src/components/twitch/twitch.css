@@ -1,5 +1,5 @@
 .twitch-background-image {
-    /* background-image: url("../../assets/images/landing/blockchain.jpg"); */
+    background-image: url("https://images.ctfassets.net/7so8go2zrvbw/1wGNNjsYEb9Y1Pap5vWE1y/9c7020f103ae0038fc8895f5c721597d/Blog_Cover_1288X400_-_2022-07-22T114326.303.png?w=1288&h=400&q=95&fm=png");
     background-size: cover;
     display: flex;
     flex-direction: row-reverse;
@@ -22,13 +22,13 @@
     font-size: 1.9rem;
     font-family: arial;
     margin: 0;
-    color: white;
+    color: black;
 }
 
 .twitch-bottom-p {
     font-family: arial;
     padding: 0 8%;
-    color: white;
+    color: black;
     font-weight: 900;
     font-weight: bolder;
     margin-top: 10px;
@@ -68,4 +68,49 @@
 
 .card-twitch:hover {
     transform: scale(1.01);
+}
+
+.table-twitch {
+-webkit-text-size-adjust: 100%;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 15px;
+line-height: 1.42857143;
+color: #2c3e50;
+border-collapse: collapse;
+border-spacing: 0;
+text-align: center;
+box-sizing: border-box;
+}
+
+.table-twitch-head {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    line-height: 1.42857143;
+    color: #2c3e50;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.img-twitch {
+    border-radius: 50%;
+    width: 80px;
+}
+
+.twitch-table-header {
+    text-transform: uppercase;
+    padding: 10px 3px;
+    font-style: italic;
+    font-size: 15px;
+    text-align: center;
+}
+
+.badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
