@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import { Container, Row, Col } from "react-bootstrap";
+import avatar from "../../assets/images/chat/avatar.png";
 import "./messages.css";
 
 const defaultSender = {
@@ -31,7 +31,7 @@ export default function Message(props) {
           <Row>
             <Col className="col-auto">
               <img
-                src={sender.avatarUrl}
+                src={avatar}
                 alt="avatar"
                 className="rounded-circle d-inline object-fit-cover"
               />
@@ -56,7 +56,7 @@ export default function Message(props) {
             </Col>
             <Col className="col-2">
               <img
-                src={sender.avatarUrl}
+                src={avatar}
                 alt="avatar"
                 className="rounded-circle d-inline object-fit-cover"
               />
