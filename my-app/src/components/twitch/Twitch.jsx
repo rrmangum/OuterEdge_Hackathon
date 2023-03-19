@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Nav } from "react-bootstrap";
 import "./twitch.css";
 
 export default function Twitch() {
+  useEffect(() => {
+    const vidDefer = document.getElementsByTagName("iframe")[0];
+    vidDefer.style.display = "none";
+    setTimeout(() => {
+      vidDefer.style.display = "block";
+    }, 1200); // delay in milliseconds
+  }, []);
+
   return (
     <>
       <Row>
