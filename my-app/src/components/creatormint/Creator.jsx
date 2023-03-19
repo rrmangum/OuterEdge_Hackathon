@@ -1,11 +1,13 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 import { format } from "date-fns";
 
 export default function Creator() {
   const { state } = useLocation();
-  console.log(state);
+
+  const handleDeny = () => {};
+  const handleAccept = () => {};
 
   return (
     <Container>
@@ -18,6 +20,16 @@ export default function Creator() {
             {format(new Date(state.payload.date), "MMMM d, yyyy")}
           </p>
           <p className="text-white py-0 my-0">{state.payload.request}</p>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
+          <Button variant="danger" className="mt-2 me-2" onClick={handleDeny}>
+            Deny
+          </Button>
+          <Button variant="success" className="mt-2" onClick={handleAccept}>
+            Accept
+          </Button>
         </Col>
       </Row>
     </Container>

@@ -18,7 +18,7 @@ export default function Twitch() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Request Content from Influencer</Modal.Title>
+          <Modal.Title>Request Content From Influencer</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Brand />
