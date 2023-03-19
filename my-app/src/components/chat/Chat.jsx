@@ -17,7 +17,7 @@ const defaultHandlers = { response: [], err: [] };
 export default function Chat(props) {
   const [connection, setConnection] = useState(null);
   const [chats, setChats] = useState(defaultChats);
-  const [wallet] = useState("");
+  const [wallet, setWallet] = useState("");
   const [handlers, setHandlers] = useState(defaultHandlers);
   const [show, setShow] = useState(false);
 
@@ -72,8 +72,16 @@ export default function Chat(props) {
 
   const handleConnect = () => {
     console.log("handleConnect");
-    console.log(init());
+    init().then(onInitSuccess);
   };
+
+  const onInitSuccess = (response) => {
+    setWallet(response);
+  };
+
+  useEffect(() => {
+    console.log("wallet useEffect", wallet);
+  }, [wallet]);
 
   const handleRequest = () => {
     handleShow();
@@ -105,7 +113,12 @@ export default function Chat(props) {
           <Brand />
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="primary" onClick={handleConnect} className="me-5">
+          <Button
+            variant="primary"
+            onClick={handleConnect}
+            className="me-5"
+            disabled={wallet && wallet !== "" ? true : false}
+          >
             Connect Wallet
           </Button>
           <span className="me-5"></span>
@@ -114,7 +127,12 @@ export default function Chat(props) {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="success" type="submit" form="brandform">
+          <Button
+            variant="success"
+            type="submit"
+            form="brandform"
+            disabled={wallet && wallet !== "" ? false : true}
+          >
             Request
           </Button>
         </Modal.Footer>

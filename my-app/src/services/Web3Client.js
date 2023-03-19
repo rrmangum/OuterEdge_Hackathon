@@ -26,6 +26,7 @@ export const init = async () => {
     "0x0a889a824c7E8D845Ac18f4b867d7c21409BF2a8"
   );
   isInitialized = true;
+  return selectedAccount;
 };
 
 export const mintToken = async (address, url) => {
@@ -36,8 +37,4 @@ export const mintToken = async (address, url) => {
   return contract.methods
     .issueNFT(address, url)
     .send({ from: selectedAccount });
-};
-
-export const getWallet = () => {
-  return selectedAccount;
 };
