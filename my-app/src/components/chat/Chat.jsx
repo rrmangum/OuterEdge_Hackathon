@@ -108,7 +108,9 @@ export default function Chat(props) {
     handleClose();
   };
 
-  const handleAccept = (requestMessage) => {};
+  const handleAccept = (requestMessage) => {
+    setCreatorShow(true);
+  };
 
   const handleDeny = (requestMessage) => {};
 
@@ -163,7 +165,7 @@ export default function Chat(props) {
         </Modal.Footer>
       </Modal>
       <Modal
-        show={handleCreatorShow}
+        show={creatorShow}
         onHide={handleCreatorClose}
         backdrop="static"
         keyboard={false}
@@ -209,6 +211,8 @@ export default function Chat(props) {
               chats={chats}
               sendMessage={sendMessage}
               handleRequest={handleRequest}
+              handleAccept={handleAccept}
+              handleDeny={handleDeny}
             />
           </Col>
           <Col>
