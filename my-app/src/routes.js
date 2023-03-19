@@ -1,7 +1,8 @@
 import { lazy } from "react";
 
 const Brand = lazy(() => import("./components/brandrequest/Brand"));
-const Creator = lazy(() => import("./components/creatormint/Creator"));
+const Chat = lazy(() => import("./components/chat/Chat"));
+const Creator = lazy(() => import("./components/creator/Creator"));
 const Landing = lazy(() => import("./components/landing/Landing"));
 const Twitch = lazy(() => import("./components/twitch/Twitch"));
 
@@ -11,6 +12,13 @@ const routes = [
     name: "Brand",
     exact: true,
     element: Brand,
+    isAnonymous: true,
+  },
+  {
+    path: "/chat",
+    name: "Chat",
+    exact: true,
+    element: Chat,
     isAnonymous: true,
   },
   {

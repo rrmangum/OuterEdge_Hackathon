@@ -16,8 +16,8 @@ export default function NavBar() {
             </Col>
             <Col>
               <Nav>
-                <Nav.Item as="li" className="mx-lg-1">
-                  <Nav.Link href="/twitch" className="active text-white">
+                <Nav.Item as="li">
+                  <Nav.Link href="/twitch" className="text-white my-0">
                     Streamers
                   </Nav.Link>
                 </Nav.Item>
