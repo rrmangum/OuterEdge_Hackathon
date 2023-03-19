@@ -13,8 +13,8 @@ export default function Twitch() {
             src="https://www.youtube.com/embed/Efq0-521Des?controls=0&autoplay=1&mute=1&loop=1"
             title="YouTube video player"
             style={{
-              transform: "scale(4.7)",
-              paddingTop: "100px",
+              transform: "scale(3.5)",
+              paddingTop: "85px",
               overflow: "hidden",
             }}
           ></iframe>
