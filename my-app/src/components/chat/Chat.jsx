@@ -30,7 +30,7 @@ export default function Chat(props) {
 
   useEffect(() => {
     const newConnection = new HubConnectionBuilder()
-      .withUrl(`https://localhost:50001/hubs/chat`)
+      .withUrl(`https://localhost:7047/chat`)
       .withAutomaticReconnect()
       .build();
     setConnection(newConnection);
