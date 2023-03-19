@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-dropzone": "^14.2.3",
     "web3": "^1.8.2"
   }
 }
