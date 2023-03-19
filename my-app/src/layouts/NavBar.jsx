@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Navbar, Nav, Container, Row, Col, Image } from "react-bootstrap";
 import logo from "../assets/images/logos/green-flame.png";
 import "./layouts.css";

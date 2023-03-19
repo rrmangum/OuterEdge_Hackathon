@@ -1,6 +1,7 @@
 .navbar-logo {
-    height: 60px;
-    width: 60px;
+    height: 30px;
+    width: auto;
+    object-fit: cover;
 }
 
 .social-list {
