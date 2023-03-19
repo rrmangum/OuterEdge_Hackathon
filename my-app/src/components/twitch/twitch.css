@@ -1,10 +1,13 @@
-.twitch-background-image {
+.twitch-container {
+    margin: 0 auto;
+    max-width: 720px
+}
+
+.twitch-header-image {
     background-image: url("https://printify.com/wp-content/uploads/2022/10/How-to-Make-Money-on-Twitch.jpg");
     background-size: cover;
     display: flex;
-    flex-direction: row-reverse;
-    align-items: top;
-    width: 100%;
+
 }
 
 .twitch-banner-text {
@@ -113,4 +116,13 @@ box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+td {
+    color: white;
+    text-align: center;
+}
+
+th {
+    color: rgb(13, 110, 253);
 }
