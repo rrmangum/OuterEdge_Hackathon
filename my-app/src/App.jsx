@@ -1,9 +1,9 @@
 import React, { Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Landing from "./components/landing/Landing";
+import Navbar from "./layouts/NavBar";
 import Footer from "./layouts/Footer";
 import routes from "./routes";
-import Twitch from "./components/twitch/Twitch";
 import "./App.css";
 
 function App() {
@@ -24,6 +24,7 @@ function App() {
 
   return (
     <div className="App-bg-dark">
+      <Navbar />
       <Suspense>
         <Routes>
           {mappedRoutes.map((route) => {
@@ -36,7 +37,6 @@ function App() {
             );
           })}
           <Route path="*" element={<Landing />} />
-          <Route path="/twitch" element={<Twitch />} />
         </Routes>
       </Suspense>
       <Footer />

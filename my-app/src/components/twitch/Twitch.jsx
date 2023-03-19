@@ -1,10 +1,35 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, { useState } from "react";
+import { Modal, Container, Button } from "react-bootstrap";
+import Brand from "../brandrequest/Brand";
 import "./twitch.css";
 
 export default function Twitch() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <>
+      <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Header closeButton>
+          <Modal.Title>Request Content from Influencer</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Brand />
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary">Request</Button>
+        </Modal.Footer>
+      </Modal>
       <div className="twitch-background-image">
         <div className="twitch-banner-text">
           <p className="twitch-p mt-3"></p>
