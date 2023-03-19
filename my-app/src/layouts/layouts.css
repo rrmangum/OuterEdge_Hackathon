@@ -10,6 +10,7 @@
     background-color: black;
 }
 
-.footer-logo-alt {
-    padding-left: 6rem;
+.footer-logo {
+    height: 60px;
+    width: 60px;
 }

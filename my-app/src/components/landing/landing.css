@@ -1,5 +1,14 @@
+  .landing-title {
+    font-size: 5rem
+  }
+
+  .landing-logo {
+    height: 100px;
+    width: 100px;
+  }
+
   .landing-background-image {
-      background-image: url("../../assets/images/landing/blockchain.jpg");
+      background-image: url("");
       background-size: cover;
       display: flex;
       flex-direction: row-reverse;
@@ -68,4 +77,20 @@
 
   .card-landing:hover {
       transform: scale(1.01);
+  }
+
+  .section-img {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .section-text {
+      position: relative;
+      top: 20%;
+  }
+
+  .message-card {
+    background-color: #111111;
   }

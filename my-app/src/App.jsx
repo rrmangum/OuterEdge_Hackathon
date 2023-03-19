@@ -23,7 +23,7 @@ function App() {
   const mappedRoutes = getMappedRoutes(routes);
 
   return (
-    <div>
+    <div className="App-bg-dark">
       <Suspense>
         <Routes>
           {mappedRoutes.map((route) => {
