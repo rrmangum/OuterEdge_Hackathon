@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import avatar from "../../assets/images/chat/avatar.png";
+import avatar from "../../assets/images/chat/ethereum.jpg";
 import "./messages.css";
 
 const defaultSender = {
@@ -18,7 +18,7 @@ export default function Message(props) {
       const newSender = { ...prevState };
       newSender.avatarUrl =
         "https://i.pinimg.com/originals/88/40/7b/88407b137f9df67cc97785d3ede2508e.jpg";
-      newSender.name = "Jenny Fischer";
+      newSender.name = "You";
       newSender.isCurrentUser = true;
       return newSender;
     });

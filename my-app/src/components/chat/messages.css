@@ -18,7 +18,7 @@
 }
 
 .message-list-card{
-    height: 40rem;
+    height: 50rem;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -39,7 +39,7 @@
 }
 
 .chat-window {
-    height: 40rem;
+    height: 50rem;
     display: flex;
     flex-direction: column;
     overflow: auto;
@@ -113,7 +113,7 @@
 }
 
 .friend-info-card{
-    height: 40rem;
+    height: 50rem;
 }
 
 .wrapper-field {
@@ -129,4 +129,16 @@
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
+}
+
+.avatar-sm{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.avatar-md {
+    height: 125px;
+    width: 125px;
+    object-fit: cover;
 }

@@ -3,7 +3,8 @@ import { init, mintToken } from "../../services/Web3Client";
 import { pinataService } from "../../services/pinataService";
 import { useDropzone } from "react-dropzone";
 import { Container, Row, Col } from "react-bootstrap";
-import './creator.css';
+import { AiOutlineCloudUpload } from "react-icons/ai";
+import "./creator.css";
 
 export default function Creator(props) {
   const [tokenData, setTokenData] = useState({
@@ -12,7 +13,8 @@ export default function Creator(props) {
     image: "",
   });
   const [walletData, setWalletData] = useState({
-    address: "",
+    address: props.brandWallet,
+    //address: "0x1f1b5b91e51a8383c23a1c9A24D3A32A30FB2064",
   });
 
   useEffect(() => {
@@ -55,15 +57,14 @@ export default function Creator(props) {
 
   const onJSONUploadSuccess = (response) => {
     console.log(response);
-    debugger;
     mintToken(`${walletData.address}`, `ipfs://${response.data.IpfsHash}`)
       .then((response) => {
-        debugger;
         console.log(response);
       })
       .catch((err) => {
         console.log(err);
       });
+    props.setCreatorShow(false);
   };
 
   const handleInputAddress = (event) => {
@@ -94,13 +95,6 @@ export default function Creator(props) {
           <form id="creatorForm">
             <input
               type="text"
-              name="address"
-              className="form-control mt-2"
-              placeholder="Enter the brand's wallet address"
-              onChange={handleInputAddress}
-            ></input>
-            <input
-              type="text"
               name="name"
               className="form-control mt-2"
               placeholder="Enter a name for your approval contract"
@@ -115,11 +109,18 @@ export default function Creator(props) {
             />
             <input {...getInputProps()}></input>
             <div className="dropzone mt-2" {...getRootProps()}>
-              <div className="creator-cursor">
-                <h5>Drop files here or click to upload</h5>
+              <div className="creator-cursor d-flex align-items-center">
+                <AiOutlineCloudUpload size={40} />
+                <h6 className="ms-2 mt-2">Upload Content</h6>
               </div>
             </div>
-            <button type="button" className="btn btn-secondary" onClick={handleMint}>Issue Approval</button>
+            <button
+              type="button"
+              className="btn btn-success mt-2"
+              onClick={handleMint}
+            >
+              Issue Approval
+            </button>
           </form>
         </Col>
       </Row>

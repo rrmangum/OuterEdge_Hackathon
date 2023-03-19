@@ -10,9 +10,7 @@ import "simplebar-react/dist/simplebar.min.css";
 export default function ChatWindow(props) {
   const { chats, sendMessage, handleRequest } = props;
   const chat = chats.currentChat.map((chatMessage, i) => {
-    console.log(chatMessage, "chatmessage before decision");
     if (chatMessage.subject === "Request") {
-      console.log(chatMessage, "chatmessage in request");
       return (
         <Request
           key={`messages_${i}`}
