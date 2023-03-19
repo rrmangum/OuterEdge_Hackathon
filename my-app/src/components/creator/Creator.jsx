@@ -124,28 +124,5 @@ export default function Creator() {
         </Col>
       </Row>
     </Container>
-    // <div className="container">
-    //   <div className="row">
-    //     <h1>Authorize brands to use my image</h1>
-    //   </div>
-    //   <div className="row">
-    //     <div>
-    //       <input {...getInputProps()}></input>
-    //       <div className="dropzone" {...getRootProps()}>
-    //         <div>
-    //           <h5>Drop files here or click to upload</h5>
-    //         </div>
-    //       </div>
-    //     </div>
-    //     <form>
-    //       <input
-    //         type="text"
-    //         name="address"
-    //         onChange={handleInputAddress}
-    //       ></input>
-    //     </form>
-    //     <button onClick={handleMint}>Mint NFT</button>
-    //   </div>
-    // </div>
   );
 }
