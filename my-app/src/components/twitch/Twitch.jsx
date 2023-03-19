@@ -1,37 +1,25 @@
-import React, { useState } from "react";
-import { Modal, Container, Button } from "react-bootstrap";
-import Brand from "../brandrequest/Brand";
+import React from "react";
+import { Container, Row, Nav } from "react-bootstrap";
 import "./twitch.css";
 
 export default function Twitch() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
     <>
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Request Content From Influencer</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Brand />
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="dark" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" type="submit" form="brandform">
-            Request
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <Row>
+        <div id="twitch-video" className="video-iframe">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/Efq0-521Des?controls=0&autoplay=1&mute=1&loop=1"
+            title="YouTube video player"
+            style={{
+              transform: "scale(4.7)",
+              paddingTop: "100px",
+              overflow: "hidden",
+            }}
+          ></iframe>
+        </div>
+      </Row>
       <Container className="twitch-container">
         <div className="twitch-header-image">
           <div className="twitch-banner-text">
@@ -47,9 +35,9 @@ export default function Twitch() {
             <tr className="twitch-table-header">
               <th>RANK</th>
               <th>Streamer</th>
-              <th></th>
               <th />
               <th />
+              <th>Total Followers</th>
               <th>AVG VIEWERS</th>
               <th>TIME STREAMED</th>
               <th>ALL TIME PEAK VIEWERS</th>
@@ -62,18 +50,19 @@ export default function Twitch() {
                 <span className="badge text-bg-warning rounded-pill">1</span>
               </td>
               <td>
-                <img
-                  className="img-twitch"
-                  src="https://static-cdn.jtvnw.net/jtv_user_pictures/cc310a6e-8cee-435b-af4c-5b480b791037-profile_image-300x300.png"
-                  alt="top streamer"
-                  onClick={handleShow}
-                />
+                <Nav.Link href="/chat">
+                  <img
+                    className="img-twitch"
+                    src="https://static-cdn.jtvnw.net/jtv_user_pictures/cc310a6e-8cee-435b-af4c-5b480b791037-profile_image-300x300.png"
+                    alt="top streamer"
+                  />
+                </Nav.Link>
               </td>
 
               <td className="twitch-table-row">KINGSLEAGUE</td>
 
               <td></td>
-              <td></td>
+              <td>11.4M</td>
               <td>213,562</td>
               <td>53.3 hours</td>
               <td>906,000</td>
@@ -98,7 +87,7 @@ export default function Twitch() {
               </td>
               <td>XQC</td>
               <td></td>
-              <td></td>
+              <td>22.1M</td>
               <td>57,234</td>
               <td>220.2 hours</td>
               <td>278,176</td>
@@ -123,7 +112,7 @@ export default function Twitch() {
               </td>
               <td>LCS</td>
               <td></td>
-              <td></td>
+              <td>6.14M</td>
               <td>29,397</td>
               <td>132.7 hours</td>
               <td>400,429</td>
@@ -150,7 +139,7 @@ export default function Twitch() {
               <td>HASANABI</td>
 
               <td></td>
-              <td></td>
+              <td>2.2M</td>
               <td>213,562</td>
               <td>53.3 hours</td>
               <td>906,000</td>
@@ -171,11 +160,11 @@ export default function Twitch() {
               <td>BUSTER</td>
 
               <td></td>
-              <td></td>
+              <td>1.8M</td>
               <td>213,562</td>
               <td>53.3 hours</td>
-              <td>906,000</td>
-              <td>11.4M</td>
+              <td>86,000</td>
+              <td>12.4M</td>
             </tr>
             <tr>
               <td>
@@ -192,11 +181,11 @@ export default function Twitch() {
               <td> SAPNAP</td>
 
               <td></td>
-              <td></td>
+              <td>4M</td>
               <td>213,562</td>
               <td>53.3 hours</td>
-              <td>906,000</td>
-              <td>11.4M</td>
+              <td>303,000</td>
+              <td>16.4M</td>
             </tr>
             <tr>
               <td>
@@ -213,11 +202,11 @@ export default function Twitch() {
               <td>SODAPOPPIN</td>
 
               <td></td>
-              <td></td>
+              <td>21.2M</td>
               <td>213,562</td>
               <td>53.3 hours</td>
-              <td>906,000</td>
-              <td>11.4M</td>
+              <td>764,000</td>
+              <td>7.2M</td>
             </tr>
             <tr>
               <td>
@@ -234,11 +223,11 @@ export default function Twitch() {
               <td>JUST_NS</td>
 
               <td></td>
-              <td></td>
+              <td>6.9M</td>
               <td>213,562</td>
               <td>53.3 hours</td>
-              <td>906,000</td>
-              <td>11.4M</td>
+              <td>97,700</td>
+              <td>8.4M</td>
             </tr>
             <tr>
               <td>
@@ -255,11 +244,11 @@ export default function Twitch() {
               <td>JAHREIN</td>
 
               <td></td>
-              <td></td>
+              <td>3.3M</td>
               <td>213,562</td>
               <td>53.3 hours</td>
-              <td>906,000</td>
-              <td>11.4M</td>
+              <td>96,000</td>
+              <td>9.4M</td>
             </tr>
             <tr>
               <td>
@@ -276,7 +265,7 @@ export default function Twitch() {
               <td> VALORANT_JPN</td>
 
               <td></td>
-              <td></td>
+              <td>2.8M</td>
               <td>213,562</td>
               <td>53.3 hours</td>
               <td>906,000</td>

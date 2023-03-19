@@ -1,14 +1,27 @@
 .twitch-container {
     margin: 0 auto;
-    max-width: 920px
+    max-width: 920px;
+    transition: 0.2s;
+    padding-top: 295px;
 }
 
-.twitch-header-image {
-    background-image: url("https://printify.com/wp-content/uploads/2022/10/How-to-Make-Money-on-Twitch.jpg");
+
+.video-iframe {
+    top: 15px;
+    left: 0;
+    right: 0;
+    width: 175%;
+    height: 100%;
+    
+}
+
+
+/* .twitch-header-image {
+    background-image: url("https://www.youtube.com/watch?v=3djf0hFYalI");
     background-size: cover;
     display: flex;
 
-}
+} */
 
 .twitch-banner-text {
     font-weight: 900;
@@ -127,6 +140,7 @@ td {
 th {
     color: rgb(13, 110, 253);
     width: 10%;
+    font-weight: 500;
 
 }
 

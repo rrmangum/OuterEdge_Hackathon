@@ -3,6 +3,8 @@ import { HubConnectionBuilder } from "@microsoft/signalr";
 import { init } from "../../services/Web3Client";
 import { Modal, Container, Row, Col, Button } from "react-bootstrap";
 import ChatWindow from "./ChatWindow";
+import ChatLog from "./ChatLog";
+import ContactCard from "./ContactCard";
 import Brand from "../brandrequest/Brand";
 import CreatorMint from '../creator/Creator';
 
@@ -66,6 +68,7 @@ export default function Chat(props) {
   const sendMessage = async (chatMessage) => {
     if (connection._connectionStarted) {
       try {
+        console.log("chatMessage right before being sent", chatMessage);
         await connection.send("SendMessage", chatMessage);
       } catch (error) {
         errHandler(error);
@@ -92,6 +95,23 @@ export default function Chat(props) {
     handleShow();
   };
 
+  const sendRequest = (values) => {
+    let requestMessage = {
+      messageText: values.request,
+      subject: "Request",
+      recipient: values.brand,
+      sender: values.influencer,
+      date: values.date,
+      mediaUrl: values.mediaUrl,
+    };
+    sendMessage(requestMessage);
+    handleClose();
+  };
+
+  const handleAccept = (requestMessage) => {};
+
+  const handleDeny = (requestMessage) => {};
+
   const errHandler = (error) => {
     if (handlers.err.length > 5) {
       handlers.err.pop();
@@ -115,7 +135,7 @@ export default function Chat(props) {
           <Modal.Title>Request Content From Influencer</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <CreatorMint />
+          <Brand sendRequest={sendRequest}/>
         </Modal.Body>
         <Modal.Footer>
           <Button
@@ -152,7 +172,7 @@ export default function Chat(props) {
           <Modal.Title>Issue Brand Approval</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <Brand />
+          <CreatorMint />
         </Modal.Body>
         <Modal.Footer>
           <Button
@@ -181,12 +201,18 @@ export default function Chat(props) {
       </Modal>
       <Container>
         <Row>
+          <Col>
+            <ChatLog />
+          </Col>
           <Col className="col-5">
             <ChatWindow
               chats={chats}
               sendMessage={sendMessage}
               handleRequest={handleRequest}
             />
+          </Col>
+          <Col>
+            <ContactCard />
           </Col>
         </Row>
       </Container>

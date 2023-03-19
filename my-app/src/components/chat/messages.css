@@ -93,3 +93,40 @@
 .friend-info-card{
     height: 40rem;
 }
+
+.chat-card-bold{
+    font-weight: bold;
+}
+
+.chat-card{
+    width: 350px;
+}
+
+.request-img{
+    object-fit: cover;
+    width: 250px;
+    height: auto;
+}
+
+.contact-card{
+    width: 18rem;
+}
+
+.friend-info-card{
+    height: 40rem;
+}
+
+.wrapper-field {
+    position: relative;
+}
+
+.icon-field {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-left: 5px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}

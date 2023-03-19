@@ -2,14 +2,14 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import FindInfluencers from "./FindInfluencers";
 import Contact from "./Contact";
-import "./landing.css";
 import Title from "./Title";
+import "./landing.css";
 
 export default function Landing() {
   return (
     <>
       <Container className="landing-bg-dark">
-        <Row>
+        <Row className="text-center">
           <Title />
         </Row>
         <br />
