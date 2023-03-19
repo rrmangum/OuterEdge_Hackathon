@@ -103,9 +103,13 @@ export default function Chat(props) {
     handleClose();
   };
 
-  const handleAccept = (requestMessage) => {};
+  const handleAccept = (requestMessage) => {
+    console.log(requestMessage, "requestMessage");
+  };
 
-  const handleDeny = (requestMessage) => {};
+  const handleDeny = (requestMessage) => {
+    console.log(requestMessage, "requestMessage");
+  };
 
   const errHandler = (error) => {
     if (handlers.err.length > 5) {
@@ -159,7 +163,7 @@ export default function Chat(props) {
       </Modal>
       <Container>
         <Row>
-          <Col>
+          <Col className="col-3">
             <ChatLog />
           </Col>
           <Col className="col-5">
@@ -167,6 +171,8 @@ export default function Chat(props) {
               chats={chats}
               sendMessage={sendMessage}
               handleRequest={handleRequest}
+              handleAccept={handleAccept}
+              handleDeny={handleDeny}
             />
           </Col>
           <Col>

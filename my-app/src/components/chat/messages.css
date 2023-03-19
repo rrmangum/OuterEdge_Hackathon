@@ -130,3 +130,9 @@
     left: 5px;
     transform: translateY(-50%);
 }
+
+.avatar-sm{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
