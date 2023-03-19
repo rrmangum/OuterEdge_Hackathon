@@ -34,7 +34,11 @@ export default function Twitch() {
               <span class="badge text-bg-warning rounded-pill">1</span>
             </td>
             <td>
-              <a href="https://www.twitch.tv/kingsleague">
+              <a
+                href="https://www.twitch.tv/kingsleague"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img
                   class="img-twitch"
                   src="https://static-cdn.jtvnw.net/jtv_user_pictures/cc310a6e-8cee-435b-af4c-5b480b791037-profile_image-300x300.png"
@@ -57,11 +61,17 @@ export default function Twitch() {
               <span class="badge text-bg-warning rounded-pill">2</span>
             </td>
             <td>
-              <img
-                class="img-twitch"
-                src="https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-300x300.jpeg"
-                alt="top streamer"
-              />
+              <a
+                href="https://www.twitch.tv/xqc"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="img-twitch"
+                  src="https://static-cdn.jtvnw.net/jtv_user_pictures/xqc-profile_image-9298dca608632101-300x300.jpeg"
+                  alt="top streamer"
+                />
+              </a>
             </td>
             <td>XQC</td>
             <td></td>
@@ -76,11 +86,17 @@ export default function Twitch() {
               <span class="badge text-bg-warning rounded-pill">3</span>
             </td>
             <td>
-              <img
-                class="img-twitch"
-                src="https://static-cdn.jtvnw.net/jtv_user_pictures/f207b3aa-179d-487b-addf-a09e81b440fd-profile_image-300x300.png"
-                alt="top streamer"
-              />
+              <a
+                href="https://www.twitch.tv/lcs"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="img-twitch"
+                  src="https://static-cdn.jtvnw.net/jtv_user_pictures/f207b3aa-179d-487b-addf-a09e81b440fd-profile_image-300x300.png"
+                  alt="top streamer"
+                />
+              </a>
             </td>
             <td>LCS</td>
             <td></td>
@@ -92,14 +108,20 @@ export default function Twitch() {
           </tr>
           <tr>
             <td>
-              <span class="badge text-bg-warning rounded-pill">1</span>
+              <span class="badge text-bg-warning rounded-pill">4</span>
             </td>
             <td>
-              <img
-                class="img-twitch"
-                src="https://static-cdn.jtvnw.net/jtv_user_pictures/107a3c5e-ab5c-4e73-81ab-b11591ee477c-profile_image-300x300.png"
-                alt="top streamer"
-              />
+              <a
+                href="https://www.twitch.tv/HASANABI"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img
+                  class="img-twitch"
+                  src="https://static-cdn.jtvnw.net/jtv_user_pictures/107a3c5e-ab5c-4e73-81ab-b11591ee477c-profile_image-300x300.png"
+                  alt="top streamer"
+                />
+              </a>
             </td>
 
             <td>HASANABI</td>
@@ -113,7 +135,7 @@ export default function Twitch() {
           </tr>
           <tr>
             <td>
-              <span class="badge text-bg-warning rounded-pill">1</span>
+              <span class="badge text-bg-warning rounded-pill">5</span>
             </td>
             <td>
               <img
@@ -134,7 +156,7 @@ export default function Twitch() {
           </tr>
           <tr>
             <td>
-              <span class="badge text-bg-warning rounded-pill">1</span>
+              <span class="badge text-bg-warning rounded-pill">6</span>
             </td>
             <td>
               <img
@@ -155,7 +177,7 @@ export default function Twitch() {
           </tr>
           <tr>
             <td>
-              <span class="badge text-bg-warning rounded-pill">1</span>
+              <span class="badge text-bg-warning rounded-pill">7</span>
             </td>
             <td>
               <img
@@ -176,7 +198,7 @@ export default function Twitch() {
           </tr>
           <tr>
             <td>
-              <span class="badge text-bg-warning rounded-pill">1</span>
+              <span class="badge text-bg-warning rounded-pill">8</span>
             </td>
             <td>
               <img
@@ -197,7 +219,7 @@ export default function Twitch() {
           </tr>
           <tr>
             <td>
-              <span class="badge text-bg-warning rounded-pill">1</span>
+              <span class="badge text-bg-warning rounded-pill">9</span>
             </td>
             <td>
               <img
@@ -218,7 +240,7 @@ export default function Twitch() {
           </tr>
           <tr>
             <td>
-              <span class="badge text-bg-warning rounded-pill">1</span>
+              <span class="badge text-bg-warning rounded-pill">10</span>
             </td>
             <td>
               <img
