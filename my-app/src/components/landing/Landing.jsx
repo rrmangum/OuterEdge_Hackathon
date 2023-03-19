@@ -9,8 +9,6 @@ export default function Landing() {
   return (
     <>
       <Container className="landing-bg-dark">
-        <br />
-        <br />
         <Row>
           <Title />
         </Row>

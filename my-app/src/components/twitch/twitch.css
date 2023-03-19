@@ -1,6 +1,6 @@
 .twitch-container {
     margin: 0 auto;
-    max-width: 720px
+    max-width: 920px
 }
 
 .twitch-header-image {
@@ -125,4 +125,9 @@ td {
 
 th {
     color: rgb(13, 110, 253);
+}
+
+.twitch-modal {
+    background-color: black;
+    opacity: 95%;
 }
