@@ -1,5 +1,9 @@
 # OnlyBrands
 
+*This project was selected by the hackathon judges for 2nd place out of 22 teams. You can view a short video of the application [here](https://drive.google.com/drive/folders/1upzts81BR24wvTBrIlaoBrAouIbsf6P1).*
+
+---
+
 ## Problem Statement
 
 ### AI changes the game
@@ -14,13 +18,11 @@ At OnlyBrands, we believe:
 OnlyBrands protects creators from the unauthorized use of their likeness in AI generated content.
 With an NFT minted by OnlyBrands' ERC-721 smart contract, it is possible to verify the authenticity of AI generated content.
 
-### Creators need help getting noticed by brands
+### [Creators need help getting noticed by brands](https://www.ypulse.com/article/2022/02/17/the-majority-of-gen-z-millennials-are-nano-creators-theyre-eager-to-work-with-brands/)
 
 But that said, 60% of 13-20-year-olds tell us they are interested in promoting brands on their social media, and we found that the majority of all young consumers (not just creators) are eager for brands to reach out to them directly or to have their content used by a brand.
 
 The problem is not all content creators know how to get their content noticed. With OnlyBrands, creators can sign up to have a better chance of signing brand partnerships.
-
-[Source](https://www.ypulse.com/article/2022/02/17/the-majority-of-gen-z-millennials-are-nano-creators-theyre-eager-to-work-with-brands/)
 
 ---
 
